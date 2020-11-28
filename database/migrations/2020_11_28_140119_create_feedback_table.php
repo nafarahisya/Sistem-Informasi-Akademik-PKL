@@ -17,6 +17,8 @@ class CreateFeedbackTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('nim');
             $table->foreign('nim')->references('nim')->on('mahasiswa');
+            $table->unsignedInteger('id_akademik');
+            $table->foreign('id_akademik')->references('id')->on('akademik');
             $table->timestamps();
         });
     }

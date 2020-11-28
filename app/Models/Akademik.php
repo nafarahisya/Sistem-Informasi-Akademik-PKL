@@ -21,4 +21,9 @@ class Akademik extends Model
         return $this->hasMany('App\Models\Form', 'id_form', 'id');
     }
 
+    public function Feedback()
+    {
+        return $this->hasMany('App\Models\Feedback', 'id', 'id_akademik');
+    }
+
 }

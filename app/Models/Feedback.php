@@ -15,4 +15,11 @@ class Feedback extends Model
     {
         return $this->hasOne('App\Models\Mahasiswa', 'nim', 'nim');
     }
+
+    public function Akademik()
+    {
+        return $this->belongsTo('App\Models\Akademik', 'id', 'id_akademik');
+    }
+
+
 }
