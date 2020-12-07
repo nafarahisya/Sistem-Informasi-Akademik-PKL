@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('{name}', function ($name) {
+    if (file_exists(public_path($name))) {
+        return redirect(url('public/' . $name));
+    } else {
+        abort(404);
+    }
+})->where('name', '(.*)');

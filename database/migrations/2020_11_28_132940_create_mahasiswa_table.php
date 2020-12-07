@@ -17,6 +17,7 @@ class CreateMahasiswaTable extends Migration
             $table->unsignedBigInteger('nim')->primary();
             $table->string('nama', 50);
             $table->string('keminatan', 30);
+            $table->char('password', 60);
             $table->timestamps();
         });
     }

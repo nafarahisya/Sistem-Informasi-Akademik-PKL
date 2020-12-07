@@ -20,6 +20,7 @@ class CreateAkademikTable extends Migration
             $table->unsignedBigInteger('nip');
             $table->foreign('id_form')->references('id')->on('form');
             $table->foreign('nip')->references('nip')->on('dosen');
+            $table->char('password', 60);
             $table->timestamps();
         });
     }
